@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Deception Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href=" {{ url_for('static', filename='assets/img/favicon.png ')}} " rel="icon">
+  <link href=" {{ url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href=" {{ url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css ')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href=" {{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous">
+           
+         </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+   
+   .img {
+    float: left;
+    width:  200px;
+    height: 200px;
+    }
+
+    .zig-zag-line {
+    border: none;
+    width: 270%;
+    margin: auto;
+    margin-top: 5%;
+    height: 10px;
+    background: linear-gradient(135deg, #E5E5E5 20%, transparent 25%) -20px 0,
+    linear-gradient(225deg, #E5E5E5 25%, transparent 20%) -20px 0,
+    linear-gradient(315deg, #E5E5E5 25%, transparent 20%),
+    linear-gradient(45deg, #E5E5E5 25%, transparent 20%);
+    background-size: 30px 30px;
+    background-color: #1A85FD; 
+    }
+
+ .brand-logo {
+  height: 90px;
+  width: 100px;
+  background: url("https://img.icons8.com/color/100/000000/twitter--v2.png");
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  
+    }  
+    </style>
+
+
+</head>
+<body>
+
+ <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center" style="background-color:lightskyblue;">
+      <nav style="align-items-right" class="navbar" >
+        <a href="index.html" class="brand-logo"></a>
+      <!-- <h3 class="logo"><a href="index.html"><span>Deception</span></a></h3>-->
+      <h3 style="color:blue; float:left;" f><span><b> Deception Detection </b></span></h3>
+
+        <ul style="color:lightskyblue">
+          <li><a class="nav-link scrollto"  href="/index">Home</a></li>
+          <li><a class="nav-link scrollto" href="/fetchdata"> View Attributes</a></li>
+          <li><a class="nav-link scrollto" href="http://merge-csv.com/"> Merge CSV Files</a></li>
+          <li><a class="nav-link scrollto" href="/fetchtweet">View Tweet Text</a></li>
+          <li><a class="nav-link scrollto " href="#">Show Overall Result</a></li>
+        
+
+
+
+          <li class="dropdown"><a href="#"><span>Classifier Result</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/svm">SVM</a></li>
+              <li><a href="/randomforest">Random Forest</a></li> 
+              <li><a href="/logisticregression">Logistic Regression</a></li>
+              <li><a href="/knn">K Nearest Neighbour</a></li>
+              <li><a href="/naivebayes">Naive Bayes</a></li>
+            </ul>
+          </li>
+
+
+
+
+          <li><a class="nav-link scrollto" href="/team">Team</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+
+   <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <h3>Our Hardworking <span>Team</span></h3>
+           </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{ url_for('static', filename='assets/img/sir.png')}}" class="img" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+
+                <h4 style="color: skyblue;">Supervisor</h4>
+                <h5>Dr. Qamar Mehmood</h5>
+                <span>Assistant Professor</span>
+                <span>qamar@cust.edu.pk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{ url_for('static', filename='assets/img/onsa.jpeg')}}" class="img" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                 <h4 style="color: skyblue;">Group Member</h4>
+                <h5>Onsa Piarus</h5>
+                <span>Computer Science Student</span>
+                <span>onsapiarus97@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{ url_for('static', filename='assets/img/somaya.jpeg')}}" class="img" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                 <h4 style="color: skyblue;">Group Member</h4>
+                <h5>Somaya Irshad</h5>
+                <span>Computer Science Student</span>
+                <span>somayairshad11@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+        
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+
+ 
+
+   <!-- ======= Bottom Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+    </div>
+  </section>
+
+  
+
+  
+  <!-- ======= Footer ======= -->
+  
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src=" {{ url_for('static', filename='assets/vendor/aos/aos.js ')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/purecounter/purecounter.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
