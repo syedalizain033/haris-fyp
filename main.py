@@ -341,8 +341,8 @@ def twitterapi():
     #print("Data Has been Generating succesfully and CSV is in your system")
     return render_template('output.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)
 
 
 
