@@ -1,1 +1,1 @@
-web: gunicorn decept-fyp:app
+web: gunicorn main:app
